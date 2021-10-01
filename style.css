@@ -1,0 +1,66 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+body{
+    height:100vh;
+    width: 100vw;
+}
+.main-container{
+    display: grid;
+    grid-template-columns: 100px 400px 100px 300px 100px;
+    grid-template-rows: 100px 800px 100px ;
+    grid-template-areas: 
+        "ls lb cs us us"
+        "ls lb cs rb rs"
+        "ls ds ds rb rs";
+    height:1000px;
+    width:1000px;
+    background-color: darkgray;
+}
+.vertical{
+    flex-direction: column;
+}
+.main-container>div{
+    display: flex;
+}
+.main-container>img{
+    height:100px;
+    width:100px;
+}
+
+.image-container{
+    display: flex;
+    position: relative;
+}
+.image-container:hover .tank-image{
+    display: block;
+}
+.tank-image{
+    display: none;
+    position:absolute;
+    top: 0;
+    left:0;
+    transform: rotate(-0.25turn);
+}
+.left-street{
+    grid-area: ls;
+}
+.left-space{
+    grid-area: lb;
+}
+.down-street{
+    grid-area: ds;
+}
+.center-street{
+    grid-area: cs;
+}
+.up-street{
+    grid-area: us;
+}
+.right-space{
+    grid-area: rb;
+}
+.right-street{
+    grid-area: rs;
+}
